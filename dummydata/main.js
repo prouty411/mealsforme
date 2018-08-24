@@ -3,6 +3,8 @@ $(document).ready(initializeApp);
 function initializeApp(){
     clickHandlers();
 }
+
+
 function clickHandlers(){
     $('.submitFood').click(function(){
         var foodItem = $('.input').val();
@@ -15,6 +17,11 @@ function clickHandlers(){
     })
 }
 
+function spoonacular(){
+    var spoonApi = {
+        url:''
+    }
+}
 
 function dummyData(fooditem) {
     var foodApi = {

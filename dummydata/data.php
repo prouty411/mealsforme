@@ -1,7 +1,7 @@
 
 <?php
 require_once('mysqlconnect.php');
-
+//turn this into a function to parse the information and insert into the datatables.
 $json = '[{
 	"id": 986153,
 	"title": "Korean Fried Chicken",
@@ -1591,7 +1591,7 @@ $json = '[{
 	"title": "Chicken and Sausage Sandwiches with Sauteed Bell Peppers and German Potato Salad",
 	"image": "https://spoonacular.com/recipeImages/289406-312x231.jpeg",
 	"imageType": "jpeg",
-	"usedIngredientCount": 4,
+	"usedIngredientCount": 4, 
 	"missedIngredientCount": 6,
 	"likes": 0
 }, {
@@ -1604,19 +1604,11 @@ $json = '[{
 	"likes": 0
 }]';
 
+$data = json_decode($json,true);$output = [];
 
-
-//query template to follow
-// INSERT INTO `recipes`(`recipe_id`, `recipe_name`, `recipe_img`) 
-// VALUES ([value-1],[value-2],[value-3])
-// echo "Recipe Id:",$data[$i]['id'],"<br/>";
-// echo "   Recipe Title: ",$data[$i]['title'],"<br/>";
-// echo "IMG file path: ",$data[$i]['image'],"<br/>","<br/>","<br/>";
-
-$data = json_decode($json,true);
-$output = [];
-
-for($i=0 ; $i<count((array)$data) ; $i++){
+//function that takes one parameter , parses the information and inserts it into the database
+function insertToDataBase($result);
+for($i=0 ; $i<count((array)$result) ; $i++){
 	$data[$i]['title'] = mysqli_real_escape_string($conn, $data[$i]['title']);
 	$query = "REPLACE INTO `recipes`(`recipe_id`, `recipe_name`, `recipe_img`)VALUES({$data[$i]['id']},'{$data[$i]['title']}','{$data[$i]['image']}')";
 	$result = mysqli_query($conn, $query);
