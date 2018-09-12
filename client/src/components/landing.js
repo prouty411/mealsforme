@@ -139,7 +139,7 @@ class LandingPage extends Component {
                     {this.props.ingredients.length < 3 ?
                         <div className='search_field'>
                             <div className="">
-                                <input placeholder={`Insert ${this.state.remainingEntries} more Ingredients`} className='center' onChange={(event) => this.userInputHandler(event)} value={this.state.currentIngredientInput} />
+                                <input placeholder={`Insert ${this.state.remainingEntries} more Ingredients`} className='center userInputField' onChange={(event) => this.userInputHandler(event)} value={this.state.currentIngredientInput} />
                             </div>
                             <img id="ingAddMinImg" src={plus} onClick={this.addIngredientToListFromInput.bind(this)} className="center-block" />
                         </div>
