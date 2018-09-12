@@ -14,6 +14,8 @@ class SignUp extends Component{
 
             <div className='container signup'>
                 <form className='col' action='http://localhost:8000/createuser.php' method='post'>
+                {/* <form className='col' action='../../userauth/createuser.php' method='post'> */}
+
 
                     <div className='row'>
                         <div className='input-field col s6'>

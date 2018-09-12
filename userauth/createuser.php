@@ -1,7 +1,6 @@
 <?php
     include_once 'mysqlconnect.php';
     $output['success']=0;
-    print_r($output);
 //security measure to make sure the submit button was clicked
     if(isset($_POST)){
         print_r($_POST);
