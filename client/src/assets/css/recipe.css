@@ -1,21 +1,7 @@
-/* .container{
-    display: flex;
-    align-content: space-around;
-}
-.dishPicture{
-    width: 25px;
-    height: 25px;
-    background-color: red;
-} */
 
-/*  */
 #pictureFrame{
     padding: 0px;
     height:auto;
-}
-.main-content{
-    /* background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url("../images/recipe-background.png"); */
-    /* background: url("../images/recipe-background.png"); */
 }
 
 .likeTitle{
